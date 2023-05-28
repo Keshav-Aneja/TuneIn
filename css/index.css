@@ -1,0 +1,29 @@
+.text-secondary {
+  color: #991fe7;
+}
+
+.bg-secondary-dark-4 {
+  background-color: #5c138b;
+}
+
+.text-grey-light-3 {
+  color: #9997a8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+h1 {
+  color: #f5f7f6;
+}
+
+.p-4 {
+  padding: 4.5rem;
+}
