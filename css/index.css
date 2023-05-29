@@ -112,6 +112,7 @@ nav li {
   font-weight: 400;
   letter-spacing: 0.5px;
   margin-top: 1.5rem;
+  cursor: pointer;
 }
 nav li img {
   box-shadow: none;
@@ -120,6 +121,10 @@ nav li img {
 }
 nav li #home {
   filter: none;
+}
+nav li:hover img {
+  filter: invert(0);
+  cursor: pointer;
 }
 
 h2 {
@@ -160,10 +165,12 @@ h2 {
 
 .left {
   width: 65%;
+  position: relative;
   height: 93%;
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .left h2 {
   font-size: 1.5rem;
@@ -297,7 +304,7 @@ h2 {
   display: inline-block;
 }
 .artist .artist-card aside {
-  float: right;
+  width: 100%;
 }
 .artist .artist-card h4 {
   font-weight: 600;
@@ -331,7 +338,7 @@ h2 {
 .player .controls img {
   width: 20px;
 }
-.player .controls #play {
+.player .controls #playBtn {
   width: 45px;
 }
 .player .controls #shuffle {
@@ -341,6 +348,109 @@ h2 {
 .player .controls #loop {
   filter: invert(0.5);
   margin-right: 10px;
+}
+
+.trend-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c183fa;
+}
+.trend-card section {
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.trend-card .left-trend {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.trend-card .left-trend img {
+  width: 55px;
+  height: 55px;
+}
+.trend-card .left-trend #prof {
+  width: 10px;
+  height: 10px;
+  filter: invert(0.6);
+}
+.trend-card .left-trend h4 {
+  font-weight: 600;
+}
+.trend-card .left-trend p {
+  font-size: 0.8rem;
+}
+.trend-card .right-trend {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trend-card .right-trend img {
+  width: 40px;
+  cursor: pointer;
+}
+
+.overlay-shadow {
+  position: fixed;
+  bottom: 22px;
+  height: 50px;
+  right: -40px;
+  width: 80%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+}
+
+#playBtn {
+  cursor: pointer;
+}
+
+#seeker {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #c183fa;
+  height: 5px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px white;
+}
+
+#seeker::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 25px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #c183fa;
+}
+
+#seeker:active::-moz-range-thumb {
+  background-color: #e6e9e7;
+  box-shadow: 0px 0px 10px white;
+}
+
+#seeker::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 25px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #c183fa;
+}
+
+#seeker:active::-webkit-slider-thumb {
+  background-color: #e6e9e7;
+  box-shadow: 0px 0px 10px white;
+}
+
+#loop {
+  cursor: pointer;
 }
 
 .p-1 {
@@ -393,6 +503,10 @@ h2 {
 
 .display-f {
   display: flex;
+}
+
+.display-i-b {
+  display: inline-block;
 }
 
 .btn-primary {

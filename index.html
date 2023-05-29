@@ -71,6 +71,7 @@
           </span>
         </section>
         <section class="left br-lg">
+          <div class="overlay-shadow"></div>
           <div class="banner br-lg p-2">
             <h3 class="text-grey-light-8">TuneIn</h3>
             <h1 class="text-primary">
@@ -95,7 +96,7 @@
                   <p>12 Tracks</p>
                 </span>
                 <span>
-                  <img src="Assets/play.png" alt="" id="play" />
+                  <img src="Assets/play-button-purple.png" alt="" id="play" />
                 </span>
               </div>
             </div>
@@ -107,7 +108,7 @@
                   <p>12 Tracks</p>
                 </span>
                 <span>
-                  <img src="Assets/play.png" alt="" id="play" />
+                  <img src="Assets/play-button-purple.png" alt="" id="play" />
                 </span>
               </div>
             </div>
@@ -119,7 +120,7 @@
                   <p>12 Tracks</p>
                 </span>
                 <span>
-                  <img src="Assets/play.png" alt="" id="play" />
+                  <img src="Assets/play-button-purple.png" alt="" id="play" />
                 </span>
               </div>
             </div>
@@ -131,13 +132,97 @@
                   <p>12 Tracks</p>
                 </span>
                 <span>
-                  <img src="Assets/play.png" alt="" id="play" />
+                  <img src="Assets/play-button-purple.png" alt="" id="play" />
                 </span>
               </div>
             </div>
           </div>
           <br />
           <h2>Trending</h2>
+          <section class="trend-card p-1">
+            <p class="text-grey">01</p>
+            <section class="display-f">
+              <div class="left-trend">
+                <img src="Assets/trend-3.jpg" alt="" class="br-sm" />
+                <span>
+                  <h4>Balonku Ada 5 Meter</h4>
+                  <span
+                    ><img src="Assets/user.png" alt="" id="prof" />
+                    <p class="display-i-b text-grey">
+                      Mamank | Dance Beat
+                    </p></span
+                  >
+                </span>
+              </div>
+              <div class="right-trend">
+                <span id="duration" class="text-grey">3:20</span>
+                <img src="Assets/play-button-purple.png" alt="" />
+              </div>
+            </section>
+          </section>
+          <section class="trend-card p-1">
+            <p class="text-grey">02</p>
+            <section class="display-f">
+              <div class="left-trend">
+                <img src="Assets/trend-1.jpg" alt="" class="br-sm" />
+                <span>
+                  <h4>Kusin Kesayangaala</h4>
+                  <span
+                    ><img src="Assets/user.png" alt="" id="prof" />
+                    <p class="display-i-b text-grey">
+                      karilu | Dance Beat
+                    </p></span
+                  >
+                </span>
+              </div>
+              <div class="right-trend">
+                <span id="duration" class="text-grey">2:56</span>
+                <img src="Assets/play-button-purple.png" alt="" />
+              </div>
+            </section>
+          </section>
+          <section class="trend-card p-1">
+            <p class="text-grey">03</p>
+            <section class="display-f">
+              <div class="left-trend">
+                <img src="Assets/trend-2.jpg" alt="" class="br-sm" />
+                <span>
+                  <h4>Ohrajan Salamno</h4>
+                  <span
+                    ><img src="Assets/user.png" alt="" id="prof" />
+                    <p class="display-i-b text-grey">
+                      Darske | Dance Beat
+                    </p></span
+                  >
+                </span>
+              </div>
+              <div class="right-trend">
+                <span id="duration" class="text-grey">3:05</span>
+                <img src="Assets/play-button-purple.png" alt="" />
+              </div>
+            </section>
+          </section>
+          <section class="trend-card p-1">
+            <p class="text-grey">04</p>
+            <section class="display-f">
+              <div class="left-trend">
+                <img src="Assets/trend-4.jpg" alt="" class="br-sm" />
+                <span>
+                  <h4>Loperman Hitesop</h4>
+                  <span
+                    ><img src="Assets/user.png" alt="" id="prof" />
+                    <p class="display-i-b text-grey">
+                      Poli Mansi | Dance Beat
+                    </p></span
+                  >
+                </span>
+              </div>
+              <div class="right-trend">
+                <span id="duration" class="text-grey">2:04</span>
+                <img src="Assets/play-button-purple.png" alt="" />
+              </div>
+            </section>
+          </section>
         </section>
         <section class="right br-lg p-1">
           <div class="artist br-lg p-2">
@@ -176,11 +261,19 @@
               <h3 class="text-primary">Balonku Ada 5 Meter</h3>
               <p class="text-grey-light-3">Mamank</p>
             </section>
-            <!-- <br /><br /> -->
+            <audio src="Audio/Lofi Japanese.mp3" class="mainAudio"></audio>
+            <input
+              type="range"
+              id="seeker"
+              min="0"
+              max="100"
+              value="0"
+              step="1"
+            />
             <section class="controls mb-1">
               <img src="Assets/loop.png" alt="" id="loop" />
               <img src="Assets/backward.png" alt="" />
-              <img src="Assets/play-button.png" alt="" id="play" />
+              <img src="Assets/play-button.png" alt="" id="playBtn" />
               <img src="Assets/forward.png" alt="" />
               <img src="Assets/shuffle-arrows.png" alt="" id="shuffle" />
             </section>
