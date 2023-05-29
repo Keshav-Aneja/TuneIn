@@ -6,9 +6,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <h1 class="bg-secondary-dark-4 text-grey-light-3">Hello</h1>
-    <h1 class="p-4 text-secondary">Hi</h1>
+    <div class="container p-2">
+      <nav class="p-1 pl-2">
+        <img
+          src="Assets/Profile.png"
+          alt="profile-pic"
+          width="30%"
+          class="br"
+        />
+        <br /><br />
+        <span class="text-grey">Hi!</span>
+        <h1>Keshav Aneja</h1>
+        <br />
+        <span class="text-grey-light-2">Menu</span>
+        <ul class="text-grey-light-2">
+          <li class="text-primary">
+            <img
+              src="Assets/home.png"
+              alt=""
+              id="home"
+              class="text-hover-primary"
+            />Explore
+          </li>
+          <li class="text-hover-primary">
+            <img src="Assets/audio-waves.png" alt="" />Genres
+          </li>
+          <li class="text-hover-primary">
+            <img src="Assets/album.png" alt="" />Albums
+          </li>
+          <li class="text-hover-primary">
+            <img src="Assets/user.png" alt="" />Artists
+          </li>
+        </ul>
+        <br />
+        <br />
+        <span class="text-grey-light-2">Library</span>
+        <ul class="text-grey-light-2">
+          <li class="text-hover-primary">
+            <img src="Assets/like.png" alt="" />Favourites
+          </li>
+          <li class="text-hover-primary">
+            <img src="Assets/flame.png" alt="" />Popular
+          </li>
+          <li class="text-hover-primary">
+            <img src="Assets/folder.png" alt="" />My Music
+          </li>
+        </ul>
+      </nav>
+      <div class="main bg-primary br-lg p-2">
+        <section class="top br-lg pb-1 column">
+          <h1 class="text-black">Home</h1>
+          <span class="column">
+            <img src="Assets/notification.png" alt="" width="23px" />
+            <img src="Assets/search.png" alt="" width="23px" id="search" />
+            <input
+              type="text"
+              name="Search"
+              placeholder="Type to Search"
+              class="br pl-3 p-1"
+            />
+          </span>
+        </section>
+        <section class="left br-lg">
+          <div class="banner br-lg p-2">
+            <h3 class="text-grey-light-8">TuneIn</h3>
+            <h1 class="text-primary">
+              Listen to <br />
+              trending songs <br />
+              all the time
+            </h1>
+            <br />
+            <a href="" class="btn-primary text-secondary">Explore Now</a>
+            <img src="Assets/girl-2.png" alt="" />
+          </div>
+          <br />
+          <h2>Playlist</h2>
+          <div class="cards pl-1 pr-1">
+            <img src="Assets/back-arrow.png" alt="" id="back" />
+            <img src="Assets/right-arrow.png" alt="" id="next" />
+            <div class="song-card br-sm">
+              <div class="song-info bg-glass br-sm">
+                <span>
+                  <h4 class="text-primary">Musik Pagi</h4>
+                  <img src="Assets/musical-note.png" alt="" />
+                  <p>12 Tracks</p>
+                </span>
+                <span>
+                  <img src="Assets/play.png" alt="" id="play" />
+                </span>
+              </div>
+            </div>
+            <div class="song-card br-sm">
+              <div class="song-info bg-glass br-sm">
+                <span>
+                  <h4 class="text-primary">Musik Pagi</h4>
+                  <img src="Assets/musical-note.png" alt="" />
+                  <p>12 Tracks</p>
+                </span>
+                <span>
+                  <img src="Assets/play.png" alt="" id="play" />
+                </span>
+              </div>
+            </div>
+            <div class="song-card br-sm">
+              <div class="song-info bg-glass br-sm">
+                <span>
+                  <h4 class="text-primary">Musik Pagi</h4>
+                  <img src="Assets/musical-note.png" alt="" />
+                  <p>12 Tracks</p>
+                </span>
+                <span>
+                  <img src="Assets/play.png" alt="" id="play" />
+                </span>
+              </div>
+            </div>
+            <div class="song-card br-sm">
+              <div class="song-info bg-glass br-sm">
+                <span>
+                  <h4 class="text-primary">Musik Pagi</h4>
+                  <img src="Assets/musical-note.png" alt="" />
+                  <p>12 Tracks</p>
+                </span>
+                <span>
+                  <img src="Assets/play.png" alt="" id="play" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <br />
+          <h2>Trending</h2>
+        </section>
+        <section class="right br-lg p-1">
+          <div class="artist br-lg p-2">
+            <h2>Top Artist</h2>
+            <section class="artist-card br-sm pr-3 display-f">
+              <img src="Assets/Ed-sheeran.webp" alt="" class="br-sm" />
+              <aside>
+                <h4>Ed Sheeran</h4>
+                <p>12M followers | 1B+ Plays</p>
+              </aside>
+            </section>
+            <section class="artist-card br-sm pr-3 display-f">
+              <img src="Assets/taylor-swift.webp" alt="" class="br-sm" />
+              <aside>
+                <h4>Taylor Swift</h4>
+                <p>9M followers | 950M+ Plays</p>
+              </aside>
+            </section>
+            <section class="artist-card br-sm pr-3 display-f">
+              <img src="Assets/billie ellish.jpg" alt="" class="br-sm" />
+              <aside>
+                <h4>Billie Ellish</h4>
+                <p>7M followers | 800M+ Plays</p>
+              </aside>
+            </section>
+          </div>
+          <br />
+          <div class="player br-lg p-1 display-f">
+            <section>
+              <img
+                src="Assets/extra-bg.webp"
+                alt=""
+                width="100%"
+                class="br-lg"
+              />
+              <h3 class="text-primary">Balonku Ada 5 Meter</h3>
+              <p class="text-grey-light-3">Mamank</p>
+            </section>
+            <!-- <br /><br /> -->
+            <section class="controls mb-1">
+              <img src="Assets/loop.png" alt="" id="loop" />
+              <img src="Assets/backward.png" alt="" />
+              <img src="Assets/play-button.png" alt="" id="play" />
+              <img src="Assets/forward.png" alt="" />
+              <img src="Assets/shuffle-arrows.png" alt="" id="shuffle" />
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

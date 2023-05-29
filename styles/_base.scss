@@ -5,6 +5,11 @@
 }
 body {
   font-family: "Poppins";
+  height: 100vh;
+  background-image: linear-gradient(to top, #1d1d1d, $purple);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ul {
@@ -18,4 +23,277 @@ a {
 
 h1 {
   color: $primary;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  max-width: 1600px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+nav {
+  float: left;
+  height: 100%;
+  width: 20%;
+}
+.main {
+  width: 78%;
+  float: right;
+  height: 100%;
+}
+nav {
+  img {
+    box-shadow: 10px -10px 75px 3px rgba(255, 255, 255, 0.5);
+  }
+  span {
+    font-weight: 600;
+  }
+  h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: $font-size-large;
+  }
+  li {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-top: $base-margin * 2;
+    img {
+      box-shadow: none;
+      filter: invert(0.5);
+      margin-right: 25px;
+    }
+    #home {
+      filter: none;
+    }
+  }
+}
+h2 {
+  font-size: $font-size-large;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.top {
+  width: 100%;
+  height: 7%;
+  h1 {
+    font-size: $font-size-xl;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  span {
+    float: right;
+  }
+  input {
+    border: 0px;
+    width: 220px;
+    font-size: $base-font-size;
+    box-shadow: $base-box-shadow;
+    transition: 1s;
+  }
+  #search {
+    position: relative;
+    left: 35px;
+    z-index: 100;
+  }
+  input:focus {
+    border: 1px solid $secondary;
+    width: 300px;
+    transition: 1s;
+  }
+}
+.left {
+  width: 65%;
+  height: 93%;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  h2 {
+    font-size: $font-size-large;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+.left::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.left {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.right {
+  width: 33%;
+  height: 93%;
+  float: right;
+}
+.banner {
+  width: 100%;
+  position: relative;
+  // background-color: #3c3c3c;
+  // background-image: url(/Assets/bg-banner.jpg);
+  background-image: linear-gradient(to bottom right, $tertiary, $secondary);
+  background-blend-mode: overlay;
+  h3 {
+    font-weight: 400;
+  }
+  h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  img {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    height: 100%;
+  }
+}
+
+.song-card {
+  display: flex;
+  align-items: flex-end;
+  background-color: #636363;
+  background-image: url(/Assets/bg-1.jpg);
+  background-blend-mode: hard-light;
+  background-size: cover;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  width: 180px;
+  padding: 0.5rem;
+  height: 150px;
+  transition: 0.5s;
+  .song-info {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    width: 100%;
+    height: 50px;
+    box-shadow: $base-box-shadow;
+    padding: 0.3rem;
+    h4 {
+      font-weight: 400;
+    }
+    img {
+      width: 13px;
+      display: inline-block;
+    }
+    p {
+      color: $primary;
+      font-size: 0.8rem;
+      display: inline-block;
+      padding-left: 0.5rem;
+    }
+    #play {
+      width: 40px;
+    }
+  }
+}
+
+.song-card:hover {
+  z-index: 100;
+  background-blend-mode: normal;
+  transform: scale(110%);
+  transition: 0.5s;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  height: fit-content;
+  img {
+    cursor: pointer;
+  }
+  > img {
+    filter: invert(0);
+    width: 30px;
+  }
+
+  #back {
+    position: absolute;
+    z-index: 1000;
+    top: 60px;
+    left: 0px;
+  }
+  #next {
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+  }
+}
+.artist {
+  width: 100%;
+  // background -color: $tertiary;
+  height: 40%;
+  .artist-card {
+    width: 100%;
+    height: 55px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    gap: 20px;
+    align-items: center;
+    img {
+      height: 100%;
+      width: 55px;
+      display: inline-block;
+    }
+    aside {
+      float: right;
+    }
+    h4 {
+      font-weight: 600;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+.player {
+  width: 90%;
+  margin: 0 auto;
+  height: 58%;
+  text-align: center;
+  background-color: $purple;
+  flex-direction: column;
+  justify-content: space-between;
+  h3 {
+    font-weight: 400;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .controls {
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    img {
+      width: 20px;
+    }
+    #play {
+      width: 45px;
+    }
+    #shuffle {
+      filter: invert(0.5);
+      margin-left: 10px;
+    }
+    #loop {
+      filter: invert(0.5);
+      margin-right: 10px;
+    }
+  }
 }
