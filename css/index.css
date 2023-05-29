@@ -322,6 +322,10 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
+.player .player-banner {
+  width: 100%;
+  height: 160px;
+}
 .player h3 {
   font-weight: 400;
 }
@@ -427,6 +431,7 @@ h2 {
   border: 0px;
   border-radius: 10px;
   background-color: #c183fa;
+  cursor: pointer;
 }
 
 #seeker:active::-moz-range-thumb {
@@ -442,6 +447,7 @@ h2 {
   border: 0px;
   border-radius: 10px;
   background-color: #c183fa;
+  cursor: pointer;
 }
 
 #seeker:active::-webkit-slider-thumb {
@@ -451,6 +457,35 @@ h2 {
 
 #loop {
   cursor: pointer;
+}
+
+#shuffle {
+  cursor: pointer;
+}
+
+.overlay-player {
+  width: 60vw;
+  height: 90vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 0, 0, 0.8);
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
 }
 
 .p-1 {
