@@ -25,35 +25,30 @@ document.addEventListener("keydown", function (e) {
   }
 });
 playbtn.addEventListener("click", MusicControl);
-const audioLength = mainAudio.duration;
 const seeker = document.getElementById("seeker");
-// seeker.max = audioLength;
-
 mainAudio.addEventListener("timeupdate", updateSeeker);
-seeker.addEventListener("input", updateMusic);
-function updateSeeker() {
-  let progress = (mainAudio.currentTime / audioLength) * 100;
-  console.log(progress);
-  seeker.value = progress;
-  if (looping && progress === 100) {
-    mainAudio.currentTime = 0;
-    mainAudio.play();
-    seeker.value = 0;
-  }
-}
-function updateMusic() {
-  console.log("updating music");
-  mainAudio.currentTime = (seeker.value / 100) * audioLength;
-}
-let looping = false;
+seeker.addEventListener("input", updatePlayer);
+
+//Adding Loop functionality
 const loop = document.getElementById("loop");
+let looping = false;
 loop.addEventListener("click", function () {
-  console.log(looping);
   if (looping) {
-    loop.style.filter = "invert(0.5)";
+    loop.style.filter = `invert(0.4)`;
     looping = false;
   } else {
     loop.style.filter = "invert(1)";
     looping = true;
   }
 });
+function updateSeeker() {
+  let progress = (mainAudio.currentTime * 100) / mainAudio.duration;
+  seeker.value = progress;
+  if (looping && progress >= 99) {
+    seeker.value = 0;
+    mainAudio.play();
+  }
+}
+function updatePlayer() {
+  mainAudio.currentTime = (seeker.value / 100) * mainAudio.duration;
+}
